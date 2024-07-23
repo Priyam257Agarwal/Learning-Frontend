@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="HTML Form PoC" />
+    <meta name="keywords" content="HTML, form, input types" />
+    <meta name="author" content="Your Name" />
+    <title>HTML Form PoC</title>
+  </head>
+  <body>
+    <header>
+      <h1>Simple Form PoC</h1>
+    </header>
+
+    <section>
+      <h2>Registration Form</h2>
+      <form action="/submit-form" method="post">
+        <!-- Text Input -->
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required /><br /><br />
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required /><br /><br />
+
+        <!-- Password Input -->
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+        /><br /><br />
+
+        <!-- Email Input -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <!-- Number Input -->
+        <label for="age">Age:</label>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          min="1"
+          max="100"
+          required
+        /><br /><br />
+
+        <!-- Radio Buttons -->
+        <p>Gender:</p>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label><br />
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label><br /><br />
+
+        <!-- Checkboxes -->
+        <p>Hobbies:</p>
+        <input type="checkbox" id="hobby1" name="hobbies" value="Reading" />
+        <label for="hobby1">Reading</label><br />
+        <input type="checkbox" id="hobby2" name="hobbies" value="Traveling" />
+        <label for="hobby2">Traveling</label><br />
+        <input type="checkbox" id="hobby3" name="hobbies" value="Cooking" />
+        <label for="hobby3">Cooking</label><br /><br />
+
+        <!-- Dropdown List -->
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+          <option value="USA">USA</option>
+          <option value="Canada">Canada</option>
+          <option value="UK">UK</option>
+          <option value="Australia">Australia</option></select
+        ><br /><br />
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+
+    <footer>
+      <hr />
+      <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
