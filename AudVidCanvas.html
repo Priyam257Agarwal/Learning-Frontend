@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="HTML Media and Graphics PoC" />
+    <meta name="keywords" content="HTML, audio, video, canvas" />
+    <meta name="author" content="Your Name" />
+    <title>HTML Media and Graphics PoC</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      section {
+        margin-bottom: 40px;
+      }
+      h2 {
+        color: #333;
+      }
+      .canvas-container {
+        border: 2px solid #333;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>HTML Media and Graphics Example</h1>
+    </header>
+
+    <section>
+      <h2>Audio Example</h2>
+      <audio controls>
+        <source src="Audio.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <section>
+      <h2>Video Example</h2>
+      <video controls width="600">
+        <source src="Video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section>
+      <h2>Canvas Example</h2>
+      <canvas
+        id="myCanvas"
+        width="600"
+        height="400"
+        class="canvas-container"
+      ></canvas>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // JavaScript to draw on the canvas
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+
+      // Draw a rectangle
+      ctx.fillStyle = "#FF0000";
+      ctx.fillRect(50, 50, 200, 100);
+
+      // Draw a circle
+      ctx.beginPath();
+      ctx.arc(400, 200, 50, 0, 2 * Math.PI);
+      ctx.fillStyle = "#0000FF";
+      ctx.fill();
+
+      // Draw some text
+      ctx.font = "30px Arial";
+      ctx.fillStyle = "#00FF00";
+      ctx.fillText("Hello, Canvas!", 150, 350);
+    </script>
+  </body>
+</html>
