@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Basics</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 0;
+        background-color: #f8f8f8;
+      }
+      .container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+      }
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 4px;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>JavaScript Basics</h1>
+      <div id="output"></div>
+    </div>
+    <script>
+      // Variables
+      let name = "John Doe";
+      let age = 30;
+      let isStudent = false;
+
+      // Data Types
+      let stringType = "Hello, World!";
+      let numberType = 42;
+      let booleanType = true;
+      let undefinedType;
+      let nullType = null;
+
+      // Operators
+      let sum = 5 + 3; // Addition
+      let difference = 10 - 6; // Subtraction
+      let product = 7 * 4; // Multiplication
+      let quotient = 20 / 4; // Division
+      let remainder = 15 % 4; // Modulus
+
+      // String Concatenation
+      let greeting = "Hello, " + name + "!";
+
+      // Output results
+      let output = `
+            <pre>
+            Variables:
+            name: ${name}
+            age: ${age}
+            isStudent: ${isStudent}
+            
+            Data Types:
+            stringType: ${stringType}
+            numberType: ${numberType}
+            booleanType: ${booleanType}
+            undefinedType: ${undefinedType}
+            nullType: ${nullType}
+            
+            Operators:
+            sum (5 + 3): ${sum}
+            difference (10 - 6): ${difference}
+            product (7 * 4): ${product}
+            quotient (20 / 4): ${quotient}
+            remainder (15 % 4): ${remainder}
+            
+            String Concatenation:
+            greeting: ${greeting}
+            </pre>
+        `;
+
+      // Display output in the div
+      document.getElementById("output").innerHTML = output;
+    </script>
+  </body>
+</html>
