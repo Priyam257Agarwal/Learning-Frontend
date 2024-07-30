@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Methods Demonstration</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 0;
+        background-color: #f8f8f8;
+      }
+      .container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+      }
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 4px;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>JavaScript Methods Demonstration</h1>
+      <div id="output"></div>
+    </div>
+    <script>
+      // String Methods
+      let str = "Hello, JavaScript!";
+      let length = str.length;
+      let toUpperCase = str.toUpperCase();
+      let toLowerCase = str.toLowerCase();
+      let includes = str.includes("JavaScript");
+      let substring = str.substring(7, 17);
+      let replace = str.replace("JavaScript", "World");
+
+      // Array Methods
+      let arr = [1, 2, 3, 4, 5];
+      let lengthArr = arr.length;
+      let push = arr.push(6);
+      let pop = arr.pop();
+      let shift = arr.shift();
+      let unshift = arr.unshift(0);
+      let indexOf = arr.indexOf(3);
+      let join = arr.join("-");
+      let map = arr.map((x) => x * 2);
+      let filter = arr.filter((x) => x > 2);
+
+      // Object Methods
+      let obj = {
+        name: "John",
+        age: 30,
+        isStudent: false,
+      };
+      let keys = Object.keys(obj);
+      let values = Object.values(obj);
+      let entries = Object.entries(obj);
+      let hasOwnProperty = obj.hasOwnProperty("name");
+
+      // Output results
+      let output = `
+            <pre>
+            String Methods:
+            str: "${str}"
+            length: ${length}
+            toUpperCase: "${toUpperCase}"
+            toLowerCase: "${toLowerCase}"
+            includes("JavaScript"): ${includes}
+            substring(7, 17): "${substring}"
+            replace("JavaScript", "World"): "${replace}"
+            
+            Array Methods:
+            arr: [1, 2, 3, 4, 5]
+            length: ${lengthArr}
+            push(6): ${push}, resulting array: [${arr}]
+            pop(): ${pop}, resulting array: [${arr}]
+            shift(): ${shift}, resulting array: [${arr}]
+            unshift(0): ${unshift}, resulting array: [${arr}]
+            indexOf(3): ${indexOf}
+            join("-"): "${join}"
+            map(x => x * 2): [${map}]
+            filter(x => x > 2): [${filter}]
+            
+            Object Methods:
+            obj: ${JSON.stringify(obj)}
+            keys: ${keys}
+            values: ${values}
+            entries: ${entries}
+            hasOwnProperty("name"): ${hasOwnProperty}
+            </pre>
+        `;
+
+      // Display output in the div
+      document.getElementById("output").innerHTML = output;
+    </script>
+  </body>
+</html>
