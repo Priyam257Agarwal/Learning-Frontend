@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click Event Example</title>
+    <style>
+      .container {
+        margin: 20px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      #clickMessage {
+        margin-top: 20px;
+        font-size: 18px;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button id="clickButton">Click Me!</button>
+      <div id="clickMessage"></div>
+    </div>
+    <script>
+      document
+        .getElementById("clickButton")
+        .addEventListener("click", function () {
+          document.getElementById("clickMessage").innerText =
+            "Button was clicked!";
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouseover Event Example</title>
+    <style>
+      .container {
+        margin: 20px;
+      }
+      .hover-box {
+        width: 200px;
+        height: 200px;
+        background-color: lightcoral;
+        text-align: center;
+        line-height: 200px;
+        font-size: 18px;
+        color: white;
+        cursor: pointer;
+      }
+      #hoverMessage {
+        margin-top: 20px;
+        font-size: 18px;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hover-box" id="hoverBox">Hover over me!</div>
+      <div id="hoverMessage"></div>
+    </div>
+    <script>
+      document
+        .getElementById("hoverBox")
+        .addEventListener("mouseover", function () {
+          document.getElementById("hoverMessage").innerText =
+            "Mouse is over the box!";
+        });
+
+      document
+        .getElementById("hoverBox")
+        .addEventListener("mouseout", function () {
+          document.getElementById("hoverMessage").innerText = "";
+        });
+    </script>
+  </body>
+</html>
